@@ -4,7 +4,7 @@ import Navbar1 from "./components/Navbar1/Navbar1";
 function App() {
   return (
     <>
-      <div className="navbar bg-base-100 shadow-sm">
+      {/* <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -75,11 +75,11 @@ function App() {
         <div className="navbar-end">
           <a className="btn">Button</a>
         </div>
-      </div>
+      </div> */}
 
       <Navbar1></Navbar1>
 
-      <h1>Vite + React</h1>
+      {/* <h1>Vite + React</h1> */}
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col lg:flex-row">
           <img

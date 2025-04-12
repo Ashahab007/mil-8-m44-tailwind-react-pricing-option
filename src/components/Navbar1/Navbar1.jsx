@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Link2 from "./Link2";
-import { AlignLeft } from "lucide-react";
+import { AlignLeft, X } from "lucide-react";
 
-// ! 3.0 Install lucide icons from https://lucide.dev/guide/installation
+// ! 2.0 Install lucide icons from https://lucide.dev/guide/installation
 
 const Navbar1 = () => {
   // ? 1.0 creating dynamic navbar directly
@@ -16,6 +16,15 @@ const Navbar1 = () => {
     { id: 5, name: "Contact", path: "/contact" },
   ];
 
+  //? 3.0 create toggling the hide and unhide the icon using state
+  const [open, setOpen] = useState(false);
+
+  // 2.1 Or creating by another component <Link> and passing as props (it is used according to projects requirements)
+
+  const links = navbarLinks.map((link) => (
+    <Link2 key={link.id} link={link}></Link2>
+  ));
+
   return (
     // ? 1.1 creating dynamic navbar directly
     <nav className="w-11/12 mx-auto">
@@ -28,16 +37,32 @@ const Navbar1 = () => {
         ))}
       </ul>
 
-      {/*! 3.1  */}
-      <AlignLeft></AlignLeft>
-      <h3>My Navbar</h3>
-      {/* 2.1 Or creating by another component <Link> and passing as props it is used according to projects requirements*/}
+      <nav className="flex md:justify-between">
+        {/* 2.4 also used the  links to show it vertically*/}
+        {/* 4.0 dynamic menu upon open or close condition */}
+        <ul
+          className={`list-none md:hidden absolute duration-1000 bg-amber-500 px-2 rounded-2xl  ${
+            open ? "left-5 top-14" : "hidden"
+          }`}
+        >
+          {links}
+        </ul>
+        <span className="flex gap-4" onClick={() => setOpen(!open)}>
+          {/* 3.1 the upper setOpen(!open) is the shortcut toggling logic i.e if open is true it will show close button and if open is false show menu button */}
 
-      <ul className="flex justify-center">
-        {navbarLinks.map((link) => (
-          <Link2 key={link.id} link={link}></Link2>
-        ))}
-      </ul>
+          {/*! 3.2 use the desired component in desired place according to upper logic */}
+          {open ? (
+            <X className="md:hidden"></X>
+          ) : (
+            <AlignLeft className="md:hidden"></AlignLeft>
+          )}
+
+          <h3>My Navbar</h3>
+        </span>
+        {/* ? 2.3  used the links variable to show the menu horizontally */}
+        <ul className="md:flex justify-center hidden">{links}</ul>
+        <button className="btn">Sign In</button>
+      </nav>
     </nav>
   );
 };
