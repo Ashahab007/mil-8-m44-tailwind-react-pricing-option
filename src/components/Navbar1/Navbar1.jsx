@@ -39,7 +39,7 @@ const Navbar1 = () => {
 
       <nav className="flex md:justify-between">
         {/* 2.4 also used the  links to show it vertically*/}
-        {/* 4.0 dynamic menu upon open or close condition */}
+        {/* 4.0 dynamic responsive menu upon open or close condition */}
         <ul
           className={`list-none md:hidden absolute duration-1000 bg-amber-500 px-2 rounded-2xl  ${
             open ? "left-5 top-14" : "hidden"
