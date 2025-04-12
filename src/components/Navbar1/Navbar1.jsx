@@ -1,5 +1,8 @@
 import React from "react";
 import Link2 from "./Link2";
+import { AlignLeft } from "lucide-react";
+
+// ! 3.0 Install lucide icons from https://lucide.dev/guide/installation
 
 const Navbar1 = () => {
   // ? 1.0 creating dynamic navbar directly
@@ -25,7 +28,11 @@ const Navbar1 = () => {
         ))}
       </ul>
 
+      {/*! 3.1  */}
+      <AlignLeft></AlignLeft>
+      <h3>My Navbar</h3>
       {/* 2.1 Or creating by another component <Link> and passing as props it is used according to projects requirements*/}
+
       <ul className="flex justify-center">
         {navbarLinks.map((link) => (
           <Link2 key={link.id} link={link}></Link2>

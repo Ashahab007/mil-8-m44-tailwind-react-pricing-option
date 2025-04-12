@@ -76,6 +76,7 @@ function App() {
           <a className="btn">Button</a>
         </div>
       </div>
+
       <Navbar1></Navbar1>
 
       <h1>Vite + React</h1>
