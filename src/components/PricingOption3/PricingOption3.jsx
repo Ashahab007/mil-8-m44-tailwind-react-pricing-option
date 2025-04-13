@@ -8,7 +8,7 @@ const PricingOption3 = () => {
   const pricingOptions = use(pricingData);
   return (
     <div>
-      <div className="grid grid-cols-2 gap-8 md:grid-cols-3 mt-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
         {pricingOptions.map((pricingCard) => (
           <PricingCard4 pricingCard={pricingCard}></PricingCard4>
         ))}

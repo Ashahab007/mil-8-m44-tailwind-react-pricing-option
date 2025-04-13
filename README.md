@@ -1,14 +1,13 @@
 <!-- Overview -->
-
-added daisyUI, Tailwind CSS & custom font.
+<!--
+- added daisyUI, Tailwind CSS & custom font.
 
 1. Created dynamic navbar using api
 2. Created dynamic navbar using api in another way by passing the props to Link component.
-3. Installed lucide icone and Created toggling menu hide and unhide lucide icone upon responsive
+3. Installed lucide icone and Created toggling menu hide and unhide lucide icon upon responsive
 4. Created dynamic design of toggling menu upon responsive.
-5. Created Pricing options by using multiple component PricingCard4, Feature5
-
--->
+5. Created Pricing options by using multiple component PricingCard4, Feature5 and added a button on each card.
+ -->
 
 <!-- # React + Vite
 

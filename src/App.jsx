@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import "./App.css";
 import Navbar1 from "./components/Navbar1/Navbar1";
-import PricingOption from "./components/PricingOption3/PricingOption3";
+import PricingOption3 from "./components/PricingOption3/PricingOption3";
 
 function App() {
   return (
@@ -110,7 +110,7 @@ function App() {
               <span className="loading loading-spinner loading-lg"></span>
             }
           >
-            <PricingOption></PricingOption>
+            <PricingOption3></PricingOption3>
           </Suspense>
         </section>
       </main>
