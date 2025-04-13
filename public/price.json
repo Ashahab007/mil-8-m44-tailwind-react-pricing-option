@@ -1,0 +1,29 @@
+[
+  {
+    "package_name": "Basic",
+    "price_per_month": 29.99,
+    "features": [
+      "Access to gym equipment",
+      "Locker room access",
+      "1 guest pass per month"
+    ]
+  },
+  {
+    "package_name": "Standard",
+    "price_per_month": 49.99,
+    "features": [
+      "All Basic features",
+      "Unlimited group fitness classes",
+      "Free body composition analysis"
+    ]
+  },
+  {
+    "package_name": "Premium",
+    "price_per_month": 79.99,
+    "features": [
+      "All Standard features",
+      "Personal trainer sessions (2 per month)",
+      "Sauna and steam room access"
+    ]
+  }
+]

@@ -19,7 +19,7 @@ const Navbar1 = () => {
   //? 3.0 create toggling the hide and unhide the icon using state
   const [open, setOpen] = useState(false);
 
-  // 2.1 Or creating by another component <Link> and passing as props (it is used according to projects requirements)
+  // 2.1 Or creating by another component <Link> and passing as props (this type of concept is used according to projects requirements)
 
   const links = navbarLinks.map((link) => (
     <Link2 key={link.id} link={link}></Link2>
@@ -28,21 +28,21 @@ const Navbar1 = () => {
   return (
     // ? 1.1 creating dynamic navbar directly
     <nav className="w-11/12 mx-auto">
-      <ul className="flex gap-4 justify-center">
+      {/*  <ul className="flex gap-4 justify-center">
         {navbarLinks.map((route) => (
           <li key={route.id}>
             <a href={route.path}></a>
             {route.name}
           </li>
         ))}
-      </ul>
+      </ul> */}
 
       <nav className="flex md:justify-between">
         {/* 2.4 also used the  links to show it vertically*/}
         {/* 4.0 dynamic responsive menu upon open or close condition */}
         <ul
           className={`list-none md:hidden absolute duration-1000 bg-amber-500 px-2 rounded-2xl  ${
-            open ? "left-5 top-14" : "hidden"
+            open ? "left-5 top-14" : "left-5 -top-30"
           }`}
         >
           {links}
