@@ -7,6 +7,7 @@
 3. Installed lucide icone and Created toggling menu hide and unhide lucide icon upon responsive
 4. Created dynamic design of toggling menu upon responsive.
 5. Created Pricing options by using multiple component PricingCard4, Feature5 and added a button on each card.
+6. Implement daisyui card component for Pricing options and customized it manually.
  -->
 
 <!-- # React + Vite

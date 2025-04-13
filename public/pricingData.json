@@ -2,6 +2,7 @@
   {
     "package_name": "Basic",
     "price_per_month": 29.99,
+    "isPopular": true,
     "features": [
       "Access to gym equipment",
       "Locker room access",
