@@ -1,10 +1,13 @@
+import { Suspense } from "react";
 import "./App.css";
 import Navbar1 from "./components/Navbar1/Navbar1";
+import PricingOption from "./components/PricingOption3/PricingOption3";
 
 function App() {
   return (
     <>
-      {/* <div className="navbar bg-base-100 shadow-sm">
+      <header>
+        {/* <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -77,26 +80,40 @@ function App() {
         </div>
       </div> */}
 
-      <Navbar1></Navbar1>
+        <Navbar1></Navbar1>
 
-      {/* <h1>Vite + React</h1> */}
-      <div className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-            className="max-w-sm rounded-lg shadow-2xl"
-          />
-          <div>
-            <h1 className="text-5xl font-bold">Box Office News!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <button className="btn btn-primary">Get Started</button>
+        {/* <h1>Vite + React</h1> */}
+        <div className="hero bg-base-200 min-h-screen">
+          <div className="hero-content flex-col lg:flex-row">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+              className="max-w-sm rounded-lg shadow-2xl"
+            />
+            <div>
+              <h1 className="text-5xl font-bold">Box Office News!</h1>
+              <p className="py-6">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                assumenda excepturi exercitationem quasi. In deleniti eaque aut
+                repudiandae et a id nisi.
+              </p>
+              <button className="btn btn-primary">Get Started</button>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
+      <main>
+        <section>
+          <h1 className="text-6xl">Our Packages</h1>
+          {/* 5.1 */}
+          <Suspense
+            fallback={
+              <span className="loading loading-spinner loading-lg"></span>
+            }
+          >
+            <PricingOption></PricingOption>
+          </Suspense>
+        </section>
+      </main>
     </>
   );
 }
